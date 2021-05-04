@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则的匹配方法</title>
+</head>
+<body>
+    <h1>正则的匹配方法</h1>
+</body>
+<script>
+//一、 正则对象底下方法；1.test 2.exec;
+// let str = "abc123fda123";
+// // let reg = /\d+/g;
+// let reg = /efg/g;
+// console.log( reg.test(str) );
+// let str = "abc123fda1234";
+// let reg = /\d+/g;
+
+// console.log( reg.exec(str) )
+// console.log(reg.lastIndex);
+// console.log( reg.exec(str) )
+// console.log( reg.exec(str) )
+
+// 字符串方法；1.split 2.search; 3.match;4.replace;
+
+// let str = "abc123fda1234rt";
+// // let arr =  str.split(1);
+// let arr =  str.split(/\d+/);
+
+// console.log(arr);
+
+// let str = "abcdefghiejk";
+// // let reg = /e/g;
+// let reg = /z/;
+// console.log( str.search(reg) );
+
+// let str = "abc11defghiej222k";
+// let reg = /\d+/g;
+// console.log( str.match(reg) );
+
+
+let str = "abc11defghiej222k";
+let reg = /\d/g;
+// console.log( str.replace(reg,"*") );
+
+let res =  str.replace(reg,function(arg){
+    console.log(arg)
+    return "*"
+})
+console.log(res);
+
+</script>
+</html>
